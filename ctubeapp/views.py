@@ -10,6 +10,9 @@ from django.contrib.auth import views as auth_views #viewsをインポート↑�
 from django.contrib.auth.decorators import login_required#ログインしてない時に強制リダイレクトさせる
 from .models import user_expansions, category, video
 from .forms import SerchForm #ユーザー登録フォームをインポート
+
+from django.views.decorators.csrf import csrf_exempt #CSRF認証を切りたい
+from django.utils.decorators import method_decorator
 # Create your views here.
 
 class LogoutView(LogoutView):
@@ -19,6 +22,7 @@ class LogoutView(LogoutView):
 def shokifunction(request):
     return render(request, 'demo/shokigamen.html')
 #クラスベースのログイン画面.予め用意されたものを継承して使用
+@method_decorator(csrf_exempt, name='dispatch')
 class Login(LoginView): 
     template_name = 'demo/login.html'
 
