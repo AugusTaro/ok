@@ -1,0 +1,25 @@
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: wrap;  
+  }
+  .header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    overflow-x: auto;
+  }
+  
+  .flex{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  .main{
+    flex-grow: 1;
+    overflow-y: auto; 
+    background-color: aquamarine; 
+  }

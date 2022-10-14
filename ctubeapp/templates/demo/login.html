@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+{% load widget_tweaks %}
+
+{% if form.errors %}
+<p>ログイン認証に失敗しました。</p>
+{% endif %}
+
+<div class="text-center" style="margin-top: 30px;">
+  <form method="POST">{% csrf_token %}
+    {% render_field form.username class="form-control" placeholder="ユーザーネーム"  %}
+    {% render_field form.password class="form-control" placeholder="パスワードを入力"  %}
+    <div style="margin-top: 20px;">
+      <button type="submit" value="login" class="btn btn-primary">login</button>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock content %}
+
+
+

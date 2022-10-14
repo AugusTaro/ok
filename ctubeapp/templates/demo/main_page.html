@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}
+メインページ
+{% endblock title %}
+
+{% block content %}
+{% load widget_tweaks %}
+
+    <div class="wrapper">
+      <div class="header">
+          
+            <header><img src="https://webpagestrage.blob.core.windows.net/img/ヘッダーアイコン.jpg"></header>
+
+            <div class="input-group">
+              <form action="" method="POST" class="form-inline">
+                {% render_field form.Name class="form-control" placeholder="キーワードを入力"  %}
+                {% csrf_token %} 
+                <button type="submit" class="btn btn-outline-success" id="button-addon2"><i class="fas fa-search"></i>検索</button>
+                
+                 <!-- ボタン -->
+                <a href="/mainpage"><button  class="btn btn-primary" type="button" name="input" >一覧に戻る</button></a>
+              </form>
+              <h1>{{ str_user }}</h1>
+              <!-- ログアウトボタン -->
+              <a href="/logout"><button class="btn btn-primary" type="button" name="input" >ログアウト</button></a>
+              <!-- データの数だけサムネと遷移ボタンを展開。sampleの中にはレコード一件分のデータ（辞書型で、imgとvideoのindexを持つ）-->                   
+            </div>
+
+   
+          
+
+      </div>
+
+
+
+
+
+
+
+      <div class= "main">
+
+        <h1 style= "background-color: pink"> 全動画 </h1>
+        <div class = "flex">
+        {% for contents in video_infomation %}
+
+          <div>
+            <!-- <p>{{ sample.video }}</p> -->
+            <h3> {{ contents.title }}</h3>
+            <img src= {{ contents.img_URL }}>
+            <h4 style  = "width= 10px"> {{ contents.video_info }}</h4>
+            <!--  ユーザーには見えない箇所。withで変数を定義。プレイヤーのURLに、パラメータ（videoURL）を結合したものを変数pathとして定義-->
+            {% with '/player/?video_info='|add:contents.video_URL as path %}
+            
+            <!-- 遷移ボタン。target="_blank"によって新規タブで開く -->
+            <a href={{ path }} target="_blank"><button class="btn btn-primary" type="button" name="input" >playerに遷移</button></a>
+            {% endwith %}
+          </div>
+
+          {% endfor %}
+        </div> 
+
+
+
+        <h1 style= "background-color: blue"> カテゴリー１ </h1>
+        <div class = "flex">
+          {% for contents in video_infomation_category1 %}
+
+            <div>
+              <!-- <p>{{ sample.video }}</p> -->
+              <h3> {{ contents.title }}</h3>
+              <img src= {{ contents.img_URL }}>
+              <!--  withで変数を定義。プレイヤーのURLパラメータにvideoURLを結合したものを変数pathとして定義-->
+              <h4 style  = "width= 10px"> {{ contents.video_info }}</h4>
+              {% with '/player/?video_info='|add:contents.video_URL as path %}
+                <!-- <p>{{ path }}</p>    --> 
+                <!-- 遷移ボタン。target="_blank"によって新規タブで開く -->
+                <a href={{ path }} target="_blank"><button class="btn btn-primary" type="button" name="input" >playerに遷移</button></a>
+              {% endwith %}
+            </div>
+
+          {% endfor %}
+        </div> 
+
+        <h1 style= "background-color: red"> カテゴリー2</h1>
+        <div class = "flex">
+          {% for contents in video_infomation_category2 %}
+
+            <div>
+              <h3> {{ contents.title }}</h3>
+              <img src= {{ contents.img_URL }}>
+              <h4> {{ contents.video_info }} </h4>
+              <!--  withで変数を定義。プレイヤーのURLパラメータにvideoURLを結合したものを変数pathとして定義-->
+              {% with '/player/?video_info='|add:contents.video_URL as path %}
+                <!-- <p>{{ path }}</p>    --> 
+                <!-- 遷移ボタン。target="_blank"によって新規タブで開く -->
+                <a href={{ path }} target="_blank"><button class="btn btn-primary" type="button" name="input" >playerに遷移</button></a>
+              {% endwith %}
+            </div>
+
+          {% endfor %}
+        </div> 
+
+        <h1 style= "background-color: green"> カテゴリー3</h1>
+        <div class = "flex">
+          {% for contents in video_infomation_category3 %}
+
+            <div>
+              <!-- <p>{{ sample.video }}</p> -->
+              <h3> {{ contents.title }}</h3>
+              <img src= {{ contents.img_URL }}>
+              <!--  withで変数を定義。プレイヤーのURLパラメータにvideoURLを結合したものを変数pathとして定義-->
+              <h4> {{ contents.video_info }}</h4>
+              {% with '/player/?video_info='|add:contents.video_URL as path %}
+                <!-- <p>{{ path }}</p>    --> 
+                <!-- 遷移ボタン。target="_blank"によって新規タブで開く -->
+                <a href={{ path }} target="_blank"><button class="btn btn-primary" type="button" name="input" >playerに遷移</button></a>
+              {% endwith %}
+
+            </div>
+          {% endfor %}
+        </div> 
+
+        <h1 style= "background-color: red"> カテゴリー4</h1>
+        <div class = "flex">
+          {% for contents in video_infomation_category4 %}
+
+            <div>
+              <h3> {{ contents.title }}</h3>
+              <img src= {{ contents.img_URL }}>
+              <h4> {{ contents.video_info }} </h4>
+              <!--  withで変数を定義。プレイヤーのURLパラメータにvideoURLを結合したものを変数pathとして定義-->
+              {% with '/player/?video_info='|add:contents.video_URL as path %}
+                <!-- <p>{{ path }}</p>    --> 
+                <!-- 遷移ボタン。target="_blank"によって新規タブで開く -->
+                <a href={{ path }} target="_blank"><button class="btn btn-primary" type="button" name="input" >playerに遷移</button></a>
+              {% endwith %}
+            </div>
+
+          {% endfor %}
+        </div> 
+
+      </div>
+    </div>    
+
+{% endblock content %}
+
+
+

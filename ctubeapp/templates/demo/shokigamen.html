@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock title %}
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+  <h1 style="text-align: center;">テスト用画面</h1>
+
+  <div class="row" style="margin-top: 20px;">
+    <div class="col s8" style="text-align: center;">
+      <!-- ボタン -->
+      <a href="/login"><button  class="btn btn-primary" type="button" name="input" >ログイン画面に遷移</button></a>
+      <!-- ボタン -->
+      <a href="/admin"><button class="btn btn-primary" type="button" name="input" >admin画面に遷移</button></a>
+      <!-- ボタン -->
+      <a href="/mainpage"><button class="btn btn-primary" type="button" name="input" >メインページ</button></a>
+      <!-- ボタン -->
+      <a href="/logout"><button class="btn btn-secondary" type="button" name="input" >ログアウト</button></a>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+
