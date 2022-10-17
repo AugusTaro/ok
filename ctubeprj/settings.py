@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'r)!66t=j6@zy*r+gwbrk=zih+xc7z_gc!lfcc5!)o-b=m*+#se'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -131,6 +131,8 @@ LOGOUT_RECIRECT_URL='shokifunction'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache' #セッションの保存先をキャッシュに変更
 
 #cssファイル読み込み
-STATICFILES_DIRS = [
+"""STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
-]
+]"""
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
