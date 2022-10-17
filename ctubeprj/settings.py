@@ -131,6 +131,6 @@ LOGOUT_RECIRECT_URL='shokifunction'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache' #セッションの保存先をキャッシュに変更
 
 #cssファイル読み込み
-"""STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]"""
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
