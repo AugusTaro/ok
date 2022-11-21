@@ -26,7 +26,7 @@ class category(models.Model):
         (4,"カテゴリー４")
     )
     group_ID  = models.ForeignKey(user_expansions,on_delete=models.CASCADE,db_column='group_ID', to_field='group_ID')#ユーザーに持たれる多側。カテゴリ数分だけ同名のGIDが存在。
-    category_ID     = models.IntegerField(unique=True, choices=CATEGORY,)#ユニークであり、カテゴリに属する多数のビデオを持つ
+    category_ID     = models.IntegerField(unique=True, )#ユニークであり、カテゴリに属する多数のビデオを持つ
     category_info     = models.CharField(max_length=200)#カテゴリの情報を保持
     category_rank     = models.IntegerField(default=1)
     def __str__(self):
