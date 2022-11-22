@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'j4css/player1.css' %}"/>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />
+
+	<title>Azure Media Services からのストリーミング</title>
+	<!--*****START OF Azure Media Player Scripts*****-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+<script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'j4css/player.css' %}"/>
+	<!--*****END OF Azure Media Player Scripts*****-->
+
+</head>
+
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+	<body>
+		
+			<div id="Group">
+				<svg class="n_7">
+					<rect id="n_7" rx="15" ry="15" x="0" y="0" width="200" height="382">
+					</rect>
+				</svg>
+				<div id="Text_y">
+					<span>{{ video_info.video_info }}</span>
+				</div>
+			</div>
+			<svg class="n_6">
+				<rect id="n_6" rx="15" ry="15" x="0" y="0" width="200" height="93">
+				</rect>
+			</svg>
+			<svg class="n_1_">
+
+
+
+
+				<div id="n_1_">
+
+
+
+
+
+                        {% comment %}メディアプレーヤーの箇所  {% endcomment %}
+					<video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video>
+
+
+
+					<script>
+					var myOptions = {
+						"nativeControlsForTouch": false,
+						controls: true,
+						autoplay: false,
+						width: "854",
+						height: "480",
+
+						language: "ja",
+						poster: "",playbackSpeed: {
+							enabled: true,
+							initialSpeed: 1.0,
+							speedLevels: [
+								{ name: "x4.0", value: 4.0 },
+								{ name: "x3.0", value: 3.0 },
+								{ name: "x2.0", value: 2.0 },
+								{ name: "x1.75", value: 1.75 },
+								{ name: "x1.5", value: 1.5 },
+								{ name: "x1.25", value: 1.25 },
+								{ name: "normal", value: 1.0 },
+								{ name: "x0.75", value: 0.75 },
+								{ name: "x0.5", value: 0.5 },
+							]
+						}
+					}
+					myPlayer = amp("azuremediaplayer", myOptions);
+					myPlayer.src([
+							{
+									"src": "{{ video_info.video_URL }}",
+									"type": "application/vnd.ms-sstr+xml"
+							}
+					]
+					);
+					</script>
+
+
+
+
+
+				</div>
+				<div class="video_infomation">
+	
+				</div>
+			
+	
+			<div class="category">
+
+			</div>
+				
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				{% comment %} <rect id="n_1_" rx="15" ry="15" x="0" y="0" width="1080" height="608">
+				</rect> {% endcomment %}
+
+
+
+
+	
+			</svg>
+			<div id="Group_">
+				<svg class="n_9">
+					<rect id="n_9" rx="0" ry="0" x="0" y="0" width="319" height="114">
+					</rect>
+				</svg>
+				<div id="C-tube_">
+					<span>C-tube（仮）</span>
+				</div>
+			</div>
+			<div id="Text_">
+				<span>{{ video_info.title }}</span>
+			</div>
+			<div id="n_022_c-com_version_0001_">
+				<span>@2022 c-com version 0.0.0.1</span>
+			</div>
+			<div id="Group_ba">
+				<svg class="n_8">
+					<rect id="n_8" rx="15" ry="15" x="0" y="0" width="470" height="96">
+					</rect>
+				</svg>
+				<div id="Text_ba">
+					<span>{{ video_info.group_ID.user_name }}</span>
+				</div>
+			</div>
+			<svg class="n_3_" viewBox="0 0 1700 6">
+				<path id="n_3_" d="M 0 6 L 1700 0">
+				</path>
+			</svg>
+			<svg class="n_4_ba" viewBox="0 0 1700 6">
+				<path id="n_4_ba" d="M 0 6 L 1700 0">
+				</path>
+			</svg>
+
+				
+		</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画再生</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="player.css"/>
+
+</head>
+
+</html>

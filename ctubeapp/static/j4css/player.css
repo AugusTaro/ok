@@ -1,0 +1,253 @@
+body{
+	background-color: rgba(252,244,225,1);
+}
+.mediaViewInfo {
+	--web-view-name: 動画再生;
+	--web-view-id: Artboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Artbord {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(252,244,225,1);
+	overflow: hidden;
+	--web-view-name: 動画再生;
+	--web-view-id: Artboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Group {
+	position: absolute;
+	width: 36px;
+	height: 482px;
+	left: 1070px;
+	top: 294px;
+	overflow: visible;
+}
+#n_7 {
+	fill: rgba(255,255,255,1);
+}
+.n_7 {
+	position: absolute;
+	overflow: visible;
+	width: 296px;
+	height: 482px;
+	left: 0px;
+	top: 0px;
+}
+
+/* 画像のキャプション */
+#Text_y {
+	left: 17px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 180px;
+	height: 447px;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(112,112,112,1);
+}
+#n_6 {
+	fill: rgba(255,255,255,1);
+}
+
+
+.n_6 {
+	position: absolute;
+	overflow: visible;
+	width: 356px;
+	height: 93px;
+	left: 1070px;
+	top: 178px;
+}
+
+
+#n_1_ {
+	fill: transparent;
+}
+.n_1_ {
+	position: absolute;
+	overflow: visible;
+	width: 1080px;
+	height: 608px;
+	left: 175px;
+	top: 218px;
+}
+#Group_ {
+	position: absolute;
+	width: 319px;
+	height: 114px;
+	left: 90px;
+	top: 5px;
+	overflow: visible;
+}
+#n_9 {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_9 {
+	position: absolute;
+	overflow: visible;
+	width: 319px;
+	height: 114px;
+	left: 0px;
+	top: 0px;
+}
+#C-tube_ {
+	left: 44px;
+	top: 26px;
+	position: absolute;
+	overflow: visible;
+	width: 264px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 42px;
+	color: rgba(112,112,112,1);
+}
+#Text_ {
+	left: 1090px;
+	top: 198px;
+	position: absolute;
+	overflow: visible;
+	width: 342px;
+	height: 52px;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(112,112,112,1);
+}
+#n_022_c-com_version_0001_ {
+	left: 425px;
+	top: 721px;
+	position: absolute;
+	overflow: visible;
+	width: 671px;
+	height: 38px;
+	text-align: center;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(112,112,112,1);
+}
+#Group_ba {
+	position: absolute;
+	width: 449px;
+	height: 96px;
+	left: 612px;
+	top: 5px;
+	overflow: visible;
+}
+#n_8 {
+	fill: rgba(255,255,255,1);
+}
+.n_8 {
+	position: absolute;
+	overflow: visible;
+	width: 549px;
+	height: 96px;
+	left: 0px;
+	top: 0px;
+}
+#Text_ba {
+	left: 20px;
+	top: 11px;
+	position: absolute;
+	overflow: visible;
+	width: 430px;
+	height: 75px;
+	text-align: center;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: rgba(112,112,112,1);
+}
+#n_3_ {
+	fill: transparent;
+	stroke: rgba(240,199,126,1);
+	stroke-width: 10px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+
+/* 下のバー */
+.n_3_ {
+	overflow: visible;
+	position: absolute;
+	width: 1200.035px;
+	height: 16px;
+	left: 110px;
+	top: 700.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_4_ba {
+	fill: transparent;
+	stroke: rgba(240,199,126,1);
+	stroke-width: 10px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_4_ba {
+	overflow: visible;
+	position: absolute;
+	width: 1200.035px;
+	height: 16px;
+	left: 85px;
+	top: 147.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_2_bb {
+	position: absolute;
+	width: 1048px;
+	height: 593px;
+	left: 191px;
+	top: 233px;
+	overflow: visible;
+}
+
+
+/* .azuremediaplayer {
+	position:absolute;top:110;left:0;height:100%;width:100%
+} */
+
+.azuremediaplayer
+{
+
+	position: absolute;
+	top: 198px;
+	left: 165px;
+
+}

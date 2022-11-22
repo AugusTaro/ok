@@ -1,0 +1,217 @@
+body{
+	background-color: rgba(252,244,225,1);
+}
+.mediaViewInfo {
+	--web-view-name: ログイン;
+	--web-view-id: Artboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#Artboad {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(252,244,225,1);
+	overflow: hidden;
+	transition: all 0.30000001192092896s ease-out;
+	--web-animation: fadein 0.30000001192092896s ease-out;
+	--web-action-type: page;
+	--web-action-target: list.html;
+	cursor: pointer;
+	--web-view-name: ログイン;
+	--web-view-id: Artboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: fit;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#n_1 {
+	fill: rgba(255,255,255,1);
+}
+.n_1 {
+	position: absolute;
+	overflow: visible;
+	width: 682px;
+	height: 369px;
+	left: 445.2px;
+	top: 267.2px;
+}
+#C-tube {
+	left: 478.8px;
+	top: 284.8px;
+	position: absolute;
+	overflow: visible;
+	width: 264px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 42px;
+	color: rgba(112,112,112,1);
+}
+#ID {
+	left: 545.2px;
+	top: 378.4px;
+	position: absolute;
+	overflow: visible;
+	width: 155px;
+	height: 31px;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	color: rgba(112,112,112,1);
+}
+#n_2 {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2 {
+	position: absolute;
+	overflow: visible;
+	width: 257px;
+	height: 42px;
+	left: 668.4px;
+	top: 373.6px;
+}
+#Text {
+	left: 545.2px;
+	top: 426.4px;
+	position: absolute;
+	overflow: visible;
+	width: 155px;
+	height: 31px;
+	text-align: left;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	color: rgba(112,112,112,1);
+}
+#n_3 {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_3 {
+	position: absolute;
+	overflow: visible;
+	width: 257px;
+	height: 44px;
+	left: 668.4px;
+	top: 420.8px;
+}
+#n_2_o {
+	fill: transparent;
+	stroke: rgba(240,199,126,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_2_o {
+	overflow: visible;
+	position: absolute;
+	width: 640.416px;
+	height: 4.884px;
+	left: 462px;
+	top: 334.3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_3_p {
+	fill: transparent;
+	stroke: rgba(240,199,126,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.n_3_p {
+	overflow: visible;
+	position: absolute;
+	width: 640.407px;
+	height: 3px;
+	left: 462px;
+	top: 533.6px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_022_c-com_version_0001 {
+	left: 577.2px;
+	top: 536px;
+	position: absolute;
+	overflow: visible;
+	width: 353px;
+	height: 27px;
+	text-align: center;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(112,112,112,1);
+}
+#Component {
+	position: absolute;
+	width: 227px;
+	height: 45px;
+	left: 1410px;
+	top: 1549.6px;
+	overflow: visible;
+}
+#n_4 {
+	fill: rgba(238,189,104,0.549);
+}
+.n_4 {
+	position: absolute;
+	overflow: visible;
+	width: 227px;
+	height: 45px;
+	left: 0px;
+	top: 0px;
+}
+#Text_t {
+	left: 114px;
+	top: 7px;
+	position: absolute;
+	overflow: visible;
+	width: 200px;
+	height: 31px;
+	text-align: center;
+	font-family: Meiryo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	color: rgba(255,255,255,1);
+}

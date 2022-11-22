@@ -1,0 +1,166 @@
+body{
+    background-color:rgba(252,244,225,1);
+}
+
+p {
+    /* 水平方向の中央揃え */
+    text-align: center;
+    font-size: 150%;
+    
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: wrap;  
+  }
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(252,244,225,1);
+    overflow-x: auto;
+    padding: 30px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  300;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+  }
+.input-group{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    /* border: 1px solid #e9006b; */
+    flex:1;
+    margin: 0 1rem 0 1rem;
+    margin:  auto;   
+}
+.botan{
+    display: flex;
+}
+.flex{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    
+  }
+.main{
+    flex-grow: 1;
+    overflow-y: auto; 
+    background-color: rgba(252,244,225,1);
+    
+}
+.thumbnail_title{
+    background-color: rgba(252,244,225,1);
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    /*margin:  auto;               /* 中央寄せ */
+    justify-content:
+    flex-start; 
+}
+
+
+
+.main_canvas{
+
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+
+ 
+}
+
+
+
+
+.box23 {
+    position: relative;
+    margin: 2em 0 2em 40px;
+    padding: 8px 15px;
+    background: rgba(238,189,104,1);
+    border-radius: 30px;
+}
+.box23:before{font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 20px;
+    left: -40px;
+    bottom: 0;
+    color: rgba(238,189,104,1);
+}
+.box23:after{
+    font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 23px;
+    left: -23px;
+    bottom: 0;
+    color: rgba(238,189,104,1);
+}
+.box23 p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+/* 区切り棒 */
+.box21{
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+}
+.box21 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box1 {
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+
+    width: 300px;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: white;/*文字色*/
+    background: rgba(238,189,104,1);
+    border: solid 3px rgba(238,189,104,1);
+    border-radius: 10px;/*角の丸み*/
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+    font-size: 39;
+}
+
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px white;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}

@@ -1,6 +1,97 @@
 {% extends "base.html" %}
+{% block css %}{% load static %}
+
+{% endblock css%}
+
+
 {% block title %}
+
 {% endblock title %}
-{% block content %}
-{% load widget_tweaks %}
+
+
+{% block content %}{% load widget_tweaks %}
+
 {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main_canvas">
+
+    {% for i in video_infomation %}
+    
+        {% if forloop.counter <= 4 %}
+            {% with video_infomation_category|add:for.loopcounter as video_info %}
+                {% comment %} 縦並び {% endcomment %}
+                <div class="main">		
+                    {% comment %} 縦並び {% endcomment %}
+                    <div class="category">
+                        <div class="box21">
+                            <p></p>
+                        </div>
+
+                        <div class="box1">
+                            <p>カテゴリー{{ forloop.counter }}</p>
+                        </div>			
+                    </div>
+                                
+                    {% comment %} 横並び {% endcomment %}
+                    <div class="flex">	
+                        {% comment %} 縦並び {% endcomment %}
+                        {% for a in video_infomation	 %}
+                            <div class="thumbnail_title">
+                                <img src={{ a.img_URL }}>
+                                <div class="box2">
+                                    <p>タイトル</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>			
+                </div>
+            {% endwith %}
+        {% endif %}
+    {% endfor %}
+    
+</div>
+
+
+
+
+元ネタ
+{% for i in video_infomation %}
+{% if forloop.counter <= 4 %}
+    {% comment %} 縦並び {% endcomment %}
+    <div class="main">		
+        {% comment %} 縦並び {% endcomment %}
+        <div class="category">
+            <div class="box21">
+                <p></p>
+            </div>
+
+            <div class="box1">
+                <p>カテゴリー{{ forloop.counter }}</p>
+            </div>			
+        </div>
+                
+        {% comment %} 横並び {% endcomment %}
+        <div class="flex">	
+            {% comment %} 縦並び {% endcomment %}
+            {% for a in video_infomation %}
+                <div class="thumbnail_title">
+                    <img src={{ a.img_URL }}>
+                    <div class="box2">
+                        <p>タイトル</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>			
+    </div>
+{% endif %}

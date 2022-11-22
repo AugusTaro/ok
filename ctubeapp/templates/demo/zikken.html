@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block css %}{% load static %}
+
+{% endblock css%}
+
+
+{% block title %}
+
+{% endblock title %}
+
+
+{% block content %}{% load widget_tweaks %}
+
+{% for a in for_range %}
+    <p>{{ forloop.counter }}</p>
+    {% with forloop.counter as outer_counter %}
+        {% for a in video_infomation %}
+            {% if a.category_ID.category_ID == outer_counter %}
+
+                {{ a.img_URL }}
+
+            {% endif %}
+
+            {% with 'video_infomation_category'|add:forloop.counter as path %}
+
+                <p>{{ path }}</p>
+            {% endwith %}
+        {%  endfor%}
+    {% endwith %}
+{% endfor %}
+{% endblock content %}
+
+

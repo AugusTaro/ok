@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block css %}{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'j4css/login.css' %}"/>
+
+
+{% endblock css %}
+
+
+{% block title %}
+ログイン
+{% endblock title %}
+
+
+{% block content %}{% load widget_tweaks %}
+
+
+<svg class="n_1">
+	<rect id="n_1" rx="15" ry="15" x="0" y="0" width="682" height="369">
+	</rect>
+</svg>
+
+
+
+		<div id="C-tube">
+			<span>C-tube（仮）</span>
+		</div>
+		
+		{% if form.errors %}
+		<p>ログイン認証に失敗しました。</p>
+		{% endif %}
+
+
+		{% comment %} フォームの箇所 {% endcomment %}
+		<form method="POST">{% csrf_token %}
+			<!--ログインIDって書いてあるとこ-->
+			<div id="ID">
+				<span>ユーザーID</span>
+			</div>
+			<svg class="n_2"><!--ボックス-->
+				<rect id="n_2" rx="0" ry="0" x="0" y="0" width="257" height="42">
+				</rect>
+			</svg> 
+			<div id="Text">
+				<span>パスワード</span>
+			</div>
+			<svg class="n_3">
+				<rect id="n_3" rx="0" ry="0" x="0" y="0" width="257" height="44">
+				</rect>
+			</svg>
+			{% render_field form.username class="n_2" %}
+			{% render_field form.password class="n_3"  %}
+			<div class="position-absolute top-0 start-0">
+				<button type="submit" style="position: absolute; left: 750px; top: 472px; width: 100px"/ class="btn btn-secondary" value="login" >ログイン</button>
+			</div>
+			
+		</form>
+
+
+		<svg class="n_2_o" viewBox="0 0 640.407 1.884">
+			<path id="n_2_o" d="M 0 1.884474158287048 L 640.4067993164062 0">
+			</path>
+		</svg>
+		<svg class="n_3_p" viewBox="0 0 640.407 3">
+			<path id="n_3_p" d="M 0 0 L 640.4067993164062 0">
+			</path>
+		</svg>
+		<div id="n_022_c-com_version_0001">
+			<span>@2022 c-com version 0.0.0.1</span>
+		</div>
+
+
+{% endblock content %}
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block css %}{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'j4css/list2.css' %}"/>
+
+{% endblock css%}
+
+{% block title %}
+サムネ表示
+{% endblock title %}
+
+
+{% block content %}{% load widget_tweaks %}
+{% for a in video_infomation %}
+
+
+{% endfor %}
+
+
+
+<div class="header">
+	<header><img src="https://webpagestrage.blob.core.windows.net/img/ヘッダーアイコン.jpg"></header>
+	
+	<div class="input-group">
+		<form action="" method="POST" class="form-inline">
+			{% render_field form.Name class="form-control" placeholder="キーワードを入力"  %}
+			{% csrf_token %} 
+			<button type="submit" class="btn btn-outline-success" id="button-addon2"><i class="fas fa-search"></i>検索</button>
+			
+			<!-- ボタン -->
+			<a href="/main_j"><button  class="btn btn-primary" type="button" name="input" >Reset</button></a>
+		</form>
+		<h1>{{ str_user }}</h1>
+		<div class="botan">
+			<!-- 初期画面ボタン -->
+			<a href="/shoki"><button class="btn btn-secondary" type="button" name="input" >初期画面に戻る</button></a> 
+			<!-- ログアウトボタン -->
+			<a href="/logout"><button class="btn btn-primary" type="button" name="input" >ログアウト</button></a>
+			<!--実験-->
+			<a href="/zikken"><button class="btn btn-secondary" type="button" name="input" >zikken</button></a>
+		</div>
+		<!-- データの数だけサムネと遷移ボタンを展開。sampleの中にはレコード一件分のデータ（辞書型で、imgとvideoのindexを持つ）-->                   
+	</div>
+</div>
+<div class="background">
+
+	<div class="main_canvas">
+
+<!--　全画面表示
+		{% comment %}  
+		    {% comment %} 縦並び {% endcomment %}
+			<div class="main">		
+				{% comment %} 縦並び {% endcomment %}
+				<div class="category">
+					<div class="box21">
+						<p></p>
+					</div>
+		
+					<div class="box1">
+						<p>全動画</p>
+					</div>			
+				</div>
+						
+				{% comment %} 横並び {% endcomment %}
+				<div class="flex">	
+					{% comment %} 縦並び {% endcomment %}
+					{% for a in video_infomation %}
+						<div class="thumbnail_title">
+							<a href={% url 'player_j' a.id %}><img src={{ a.img_URL }}></a>
+							<a href={% url 'player_j' a.id %}>{{ a.title }}</a>
+							<h1>{{ a.id }}</h1>
+							<div class="box2">
+								<p>{{ a.title }}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>			
+			</div>
+
+-->
+		<div class="main">		
+			{% for i in categorys %}
+				<div class="category">
+					<div class="box21">
+						<p></p>
+					</div>
+					
+					<div class="box1">
+						<p>{{ path }}</p>
+						<p>{{ i.category_info }}</p>
+					</div>			
+				</div>
+					{% with forloop.counter as outer_counter %}
+					<div class="flex">	
+						{% for a in video_infomation %}
+						{% if a.category_ID.category_ID == outer_counter %}
+						{% comment %} 縦並び {% endcomment %}
+						<div class="thumbnail_title">
+							<a href={% url 'player_j' a.id %} target="_blank"><img src={{ a.img_URL }}></a>
+							<div class="box2">
+								<p>{{ a.title }}</p>
+							</div>
+						</div>
+						{% endif %}
+						{% endfor %}
+					</div>			
+					{% endwith %}
+					{% endfor %}
+					
+		</div>
+
+	
+	
+	</div>
+
+
+{% endblock content %}

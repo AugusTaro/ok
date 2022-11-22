@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% block css %}{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+{% endblock %}
+
 {% block title %}
 メインページ
 {% endblock title %}
@@ -18,9 +24,11 @@
                 <button type="submit" class="btn btn-outline-success" id="button-addon2"><i class="fas fa-search"></i>検索</button>
                 
                  <!-- ボタン -->
-                <a href="/mainpage"><button  class="btn btn-primary" type="button" name="input" >一覧に戻る</button></a>
+                <a href="/mainpage"><button  class="btn btn-primary" type="button" name="input" >リセット</button></a>
               </form>
               <h1>{{ str_user }}</h1>
+              <!-- 初期画面ボタン -->
+              <a href="/shoki"><button class="btn btn-secondary" type="button" name="input" >初期画面に戻る</button></a>
               <!-- ログアウトボタン -->
               <a href="/logout"><button class="btn btn-primary" type="button" name="input" >ログアウト</button></a>
               <!-- データの数だけサムネと遷移ボタンを展開。sampleの中にはレコード一件分のデータ（辞書型で、imgとvideoのindexを持つ）-->                   
@@ -39,11 +47,11 @@
 
       <div class= "main">
 
-        <h1 style= "background-color: pink"> 全動画 </h1>
+        <h1 style= "background-color: blue"> 全動画 </h1>
         <div class = "flex">
         {% for contents in video_infomation %}
 
-          <div>
+          <div class = "contents">
             <!-- <p>{{ sample.video }}</p> -->
             <h3> {{ contents.title }}</h3>
             <img src= {{ contents.img_URL }}>
@@ -61,7 +69,7 @@
 
 
 
-        <h1 style= "background-color: blue"> カテゴリー１ </h1>
+        <h1 style= "background-color: pink"> カテゴリー１ </h1>
         <div class = "flex">
           {% for contents in video_infomation_category1 %}
 
@@ -81,7 +89,7 @@
           {% endfor %}
         </div> 
 
-        <h1 style= "background-color: red"> カテゴリー2</h1>
+        <h1 style= "background-color: black"> カテゴリー2</h1>
         <div class = "flex">
           {% for contents in video_infomation_category2 %}
 
@@ -120,7 +128,7 @@
           {% endfor %}
         </div> 
 
-        <h1 style= "background-color: red"> カテゴリー4</h1>
+        <h1 style= "background-color: orange"> カテゴリー4</h1>
         <div class = "flex">
           {% for contents in video_infomation_category4 %}
 

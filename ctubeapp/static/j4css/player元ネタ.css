@@ -1,0 +1,106 @@
+body{
+    background-color:rgba(252,244,225,1);
+}
+
+p {
+    /* 水平方向の中央揃え */
+    text-align: center;
+    font-size: 150%;
+    
+  }
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(252,244,225,1);
+    overflow-x: auto;
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+  }
+  
+.flex{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    
+  }
+.main{
+    flex-grow: 1;
+    overflow-y: auto; 
+    background-color: rgba(252,244,225,1);
+    
+}
+
+
+
+.main_canvas{
+    display: flex;
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+
+ 
+}
+
+
+
+
+
+
+
+
+/* 区切り棒 */
+.box21{
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+}
+.box21 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box1 {
+    padding: 50px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+
+    width: 300px;
+    padding: 0.5em 1em;
+    margin: 0 0;
+    font-weight: bold;
+    color: white;/*文字色*/
+    background: rgba(238,189,104,1);
+    border: solid 3px rgba(238,189,104,1);
+    border-radius: 10px;/*角の丸み*/
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+    font-size: 39;
+}
+
+
+.contents{
+    display: flex;
+    margin: auto;
+
+   
+}
+.player{
+    margin: auto;
+}
